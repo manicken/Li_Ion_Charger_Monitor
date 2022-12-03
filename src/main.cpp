@@ -25,7 +25,7 @@ void oled_LCD_write12digitDec(uint32_t value, uint8_t maxDigits, uint8_t dotPos)
 void setup() {
     // put your setup code here, to run once:
     display.begin(SSD1306_SWITCHCAPVCC, 0x3C); // Address 0x3C for 128x32
-
+    display.setRotation(1);
      // Show image buffer on the display hardware.
     // Since the buffer is intialized with an Adafruit splashscreen
     // internally, this will display the splashscreen.
@@ -141,22 +141,22 @@ void printAll()
     ch5 = ch5/TOTAL_READS;ch6 = ch6/TOTAL_READS;ch7 = ch7/TOTAL_READS;ch8 = ch8/TOTAL_READS;
     display.setCursor(0,0);
     oled_LCD_write12digitDec((ch1*5000)/4029, DIGITS, DECIMAL_PLACE);
-    display.setCursor(TEXT_WIDTH,0);
+    display.setCursor(0,16);
     oled_LCD_write12digitDec((ch5*5000)/4029, DIGITS, DECIMAL_PLACE);
 
-    display.setCursor(0,16);
+    display.setCursor(0,32);
     oled_LCD_write12digitDec((ch2*5000)/4029, DIGITS, DECIMAL_PLACE);
-    display.setCursor(TEXT_WIDTH,16);
+    display.setCursor(0,48);
     oled_LCD_write12digitDec((ch6*5000)/4029, DIGITS, DECIMAL_PLACE);
 
-    display.setCursor(0,32);
+    display.setCursor(0,64);
     oled_LCD_write12digitDec((ch3*5000)/4029, DIGITS, DECIMAL_PLACE);
-    display.setCursor(TEXT_WIDTH,32);
+    display.setCursor(0,80);
     oled_LCD_write12digitDec((ch7*5000)/4029, DIGITS, DECIMAL_PLACE);
     
-    display.setCursor(0,48);
+    display.setCursor(0,96);
     oled_LCD_write12digitDec((ch4*5000)/4029, DIGITS, DECIMAL_PLACE);
-    display.setCursor(TEXT_WIDTH,48);
+    display.setCursor(0,112);
     oled_LCD_write12digitDec((ch8*5000)/4029, DIGITS, DECIMAL_PLACE);
     display.display();
 
