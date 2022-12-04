@@ -140,24 +140,24 @@ void printAll()
     ch1 = ch1/TOTAL_READS;ch2 = ch2/TOTAL_READS;ch3 = ch3/TOTAL_READS;ch4 = ch4/TOTAL_READS;
     ch5 = ch5/TOTAL_READS;ch6 = ch6/TOTAL_READS;ch7 = ch7/TOTAL_READS;ch8 = ch8/TOTAL_READS;
     display.setCursor(0,0);
-    oled_LCD_write12digitDec((ch1*5000)/4029, DIGITS, DECIMAL_PLACE);
+    oled_LCD_write12digitDec((ch8*5000)/4029, DIGITS, DECIMAL_PLACE);
     display.setCursor(0,16);
-    oled_LCD_write12digitDec((ch5*5000)/4029, DIGITS, DECIMAL_PLACE);
+    oled_LCD_write12digitDec((ch7*5000)/4029, DIGITS, DECIMAL_PLACE);
 
     display.setCursor(0,32);
-    oled_LCD_write12digitDec((ch2*5000)/4029, DIGITS, DECIMAL_PLACE);
-    display.setCursor(0,48);
     oled_LCD_write12digitDec((ch6*5000)/4029, DIGITS, DECIMAL_PLACE);
+    display.setCursor(0,48);
+    oled_LCD_write12digitDec((ch5*5000)/4029, DIGITS, DECIMAL_PLACE);
 
     display.setCursor(0,64);
-    oled_LCD_write12digitDec((ch3*5000)/4029, DIGITS, DECIMAL_PLACE);
+    oled_LCD_write12digitDec((ch4*5000)/4029, DIGITS, DECIMAL_PLACE);
     display.setCursor(0,80);
-    oled_LCD_write12digitDec((ch7*5000)/4029, DIGITS, DECIMAL_PLACE);
+    oled_LCD_write12digitDec((ch3*5000)/4029, DIGITS, DECIMAL_PLACE);
     
     display.setCursor(0,96);
-    oled_LCD_write12digitDec((ch4*5000)/4029, DIGITS, DECIMAL_PLACE);
+    oled_LCD_write12digitDec((ch2*5000)/4029, DIGITS, DECIMAL_PLACE);
     display.setCursor(0,112);
-    oled_LCD_write12digitDec((ch8*5000)/4029, DIGITS, DECIMAL_PLACE);
+    oled_LCD_write12digitDec((ch1*5000)/4029, DIGITS, DECIMAL_PLACE);
     display.display();
 
     ch1=0;ch2=0;ch3=0;ch4=0;ch5=0;ch6=0;ch7=0;ch8=0;
